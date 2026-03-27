@@ -1,0 +1,131 @@
+runtime: paperclip
+version: 1
+defaults:
+  model: claude-sonnet-4-20250514
+  concurrency: 3
+  approval: manual
+
+agents:
+  # Leadership — frontier models for judgment
+  ceo:
+    model: claude-opus-4-20250514
+    budget: 50.00
+    approval: manual
+  cto:
+    model: claude-opus-4-20250514
+    budget: 30.00
+    approval: manual
+
+  # VPs — sonnet for depth
+  vp-engineering:
+    model: claude-sonnet-4-20250514
+    budget: 40.00
+    approval: auto
+  vp-quality:
+    model: claude-sonnet-4-20250514
+    budget: 30.00
+    approval: auto
+  vp-knowledge:
+    model: claude-sonnet-4-20250514
+    budget: 20.00
+    approval: auto
+
+  # Leads — sonnet
+  lead-researcher:
+    model: claude-sonnet-4-20250514
+    budget: 20.00
+    approval: auto
+  lead-designer:
+    model: claude-sonnet-4-20250514
+    budget: 20.00
+    approval: auto
+
+  # Review agents — sonnet for specialized analysis
+  architecture-strategist:
+    model: claude-sonnet-4-20250514
+    budget: 10.00
+    approval: auto
+  security-sentinel:
+    model: claude-sonnet-4-20250514
+    budget: 10.00
+    approval: auto
+  performance-oracle:
+    model: claude-sonnet-4-20250514
+    budget: 10.00
+    approval: auto
+  agent-native-reviewer:
+    model: claude-sonnet-4-20250514
+    budget: 10.00
+    approval: auto
+  data-integrity-guardian:
+    model: claude-sonnet-4-20250514
+    budget: 10.00
+    approval: auto
+
+  # Review agents — haiku for volume
+  code-simplicity-reviewer:
+    model: claude-haiku-4-5-20251001
+    budget: 5.00
+    approval: auto
+  pattern-recognition-specialist:
+    model: claude-haiku-4-5-20251001
+    budget: 5.00
+    approval: auto
+  schema-drift-detector:
+    model: claude-haiku-4-5-20251001
+    budget: 5.00
+    approval: auto
+
+  # Research agents — haiku for volume
+  learnings-researcher:
+    model: claude-haiku-4-5-20251001
+    budget: 5.00
+    approval: auto
+  repo-research-analyst:
+    model: claude-haiku-4-5-20251001
+    budget: 5.00
+    approval: auto
+  best-practices-researcher:
+    model: claude-haiku-4-5-20251001
+    budget: 5.00
+    approval: auto
+  framework-docs-researcher:
+    model: claude-haiku-4-5-20251001
+    budget: 5.00
+    approval: auto
+  git-history-analyzer:
+    model: claude-haiku-4-5-20251001
+    budget: 5.00
+    approval: auto
+
+  # Design agents
+  design-implementation-reviewer:
+    model: claude-sonnet-4-20250514
+    budget: 10.00
+    approval: auto
+  design-iterator:
+    model: claude-sonnet-4-20250514
+    budget: 10.00
+    approval: auto
+  figma-design-sync:
+    model: claude-sonnet-4-20250514
+    budget: 10.00
+    approval: auto
+
+  # Workflow agents
+  bug-reproduction-validator:
+    model: claude-sonnet-4-20250514
+    budget: 10.00
+    approval: auto
+  spec-flow-analyzer:
+    model: claude-haiku-4-5-20251001
+    budget: 5.00
+    approval: auto
+  pr-comment-resolver:
+    model: claude-sonnet-4-20250514
+    budget: 10.00
+    approval: auto
+  style-editor:
+    model: claude-haiku-4-5-20251001
+    budget: 5.00
+    approval: auto
